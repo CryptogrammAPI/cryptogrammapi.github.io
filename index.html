@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Сервисы CryptxDSS: Титульная страница</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Cryptogramm API
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cryptogramm API Документация</div>  </div>
+</div><!--header-->
+<div class="contents">
+	<h2>Авторизация</h2><div> Для работы необходимо пройти процедуру авторизации на
+		сервисе аутентификации/авторизации (<a class="el"
+			href="interface_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_i_authentication.html"
+			target="_self">IAuthentication</a>).</div>
+	</ul><ol type="a">
+		
+		<li><b> Авторизация по сертификату </b>
+			<div class="note warning"><b><span class="warningtitle">Важно!</span>
+				</b> Сертификат, выбранный для авторизации, должен быть зарегистрирован
+				в системе.</div><div> Авторизация по сертификату выполняется в два
+				этапа:</div><ol type="1">
+				<li>
+					<div>
+						<b>Получение случайных данных.</b>
+						<div>Для получения случайных данных необходимо вызвать метод <a
+								class="el"
+								href="interface_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_i_authentication.html#afd26cb0e99d9d1abd989f718cca1bc72"
+								>GetRandomForSign</a>.</div><div>В случае успешного
+							ответа вернется объект <a class="el"
+								href="class_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_model_1_1_random_for_sign_response.html"
+								>RandomForSignResponse</a> с полем <a class="el"
+								href="class_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_model_1_1_random_for_sign_response.html#a06193c47881cb163012ad9c7dafab310"
+								>Data</a>.</div></div>
+				</li>
+				<li>
+					<div><b> Отправка подписанных данных.</b>
+						<div>Данные полученные на предыдущем этапе, необходимо подписать
+							с помощью сертификата, выбранного для авторизации.
+							</div><div>Подписанные данные отправить с помощью метода <a
+								class="el"
+								href="interface_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_i_authentication.html#a4d67a7ec770a387107deacc9574c5246"
+								>LoginViaIntergrator</a> .</div>
+					</div>
+				</li>
+			</ol></li>
+	</ol>
+	<h3>Результат авторизации</h3>
+	<ol type="a">
+		<li>При успешной авторизации вернется ответ типа <a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_model_1_1_authorized_response.html"
+				>AuthorizedResponse</a>, содержащий: <ol type="1">
+				<li><a class="el"
+						href="class_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_model_1_1_authorized_response.html#af411c13d5665c41244237582aa4d8b9d"
+						>Token</a> – токен доступа (идентификатор сессии).</li>
+				<li><a class="el"
+						href="class_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_model_1_1_authorized_response.html#a4730ff63ea7eb670a7a302ef41987dc5"
+						>User</a> – краткая информация о пользователе.
+				<br><a class="el"
+						href="class_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_model_1_1_user.html#aa38fa1f60e34cbe35a4c3c01d8ad0f75"
+						>User.AuthAcceptType</a> – тип дополнительной авторизации. <div
+						class="note warning"><b><span class="warningtitle"
+							>Важно!</span></b> Если для авторизации указан метод <a
+							class="el"
+							href="namespace_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_model_1_1_enum.html#a24c018400641b5d8e47eb57d8d89c4eb"
+							>SMS</a>. Необходимо отправить <b>Token</b> и <b>пин-код из
+							СМС</b> воспользовавшись методом <a class="el"
+							href="interface_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_i_authentication.html#a17f6c86cb066d9360a4137482ba1a7a9"
+							>LoginWithPIN</a>.</div></li>
+			</ol>
+		</li>
+		<li>При возникновении ошибок в процессе авторизации вернется ответ типа <a
+				class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_model_1_1_authentication_error_response.html"
+				>AuthenticationErrorResponse</a>. <br>Текст ошибки доступен для просмотра
+				в поле <a class="el"
+					href="class_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_model_1_1_authentication_error_response.html#a9292fbf46ffc8ec9bbc1927942dcef29"
+					>MessageError</a>.</p></li>
+	</ol>
+	<h3>Завершение сессии</h3> Для завершения сессии необходимо отправить <b>Token</b>,
+	воспользовавшись методом <a class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_authentication_1_1_web_service_1_1_interface_1_1_i_authentication.html#a032d59e76ab98b0e332886cd2b3b22e3"
+		>DeactivateToken</a>. <h2>Криптооперации</h2> Криптооперации выполняются с помощью
+	<a class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_i_crypto_operation.html"
+		target="_self">ICryptoOperation</a>. <h3>Подпись</h3> Для подписи данных необходимо
+	использовать метод <a class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_i_crypto_operation.html#a934244f186b6305c91229f2642be4794"
+		>Sign</a>, с параметрами: <ol type="1">
+		<li>Token - токен доступа;</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_document_collection.html"
+				>DocumentCollection</a> - коллекция с данными;</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_signature_settings.html"
+				>SignatureSettings</a> - настройки подписи;</li>
+	</ol>
+	<h3>Проверка подписи</h3> Для проверки присоединённой или отсоединённой подписи
+	необходимо использовать методы <a class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_i_crypto_operation.html#ae1ad4fe7bc4ed3e4534256e8a8fa4d76"
+		>SignVerify</a> или <a class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_i_crypto_operation.html#ab6e9f16ac34b564612f38c229a914fc2"
+		>DetachedSignVerify</a> соответственно, которые имеют следующие параметры: <ol
+		type="1">
+		<li>Token - токен доступа;</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_detached_sign.html"
+				>DetachedSign</a> - отсоединённая подпись (только для отсоединённой
+			подписи, в <a class="el"
+				href="interface_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_i_crypto_operation.html#ae1ad4fe7bc4ed3e4534256e8a8fa4d76"
+				>SignVerify</a> данный параметр отсутствует);</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_document_collection.html"
+				>DocumentCollection</a> - коллекция с данными;</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_verify_signature_settings.html"
+				>VerifySignatureSettings</a> - настройки проверки.</li>
+	</ol>
+	<h3>Шифрование данных</h3> Для зашифрования данных необходимо использовать метод
+		<a class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_i_crypto_operation.html#a549ab13668dfd2d2428348f554f4a060"
+		>Encrypt</a> с параметрами: <ol type="1">
+		<li>Token - токен доступа;</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_document_collection.html"
+				>DocumentCollection</a> - коллекция с данными;</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_certificate_collection.html"
+				>CertificateCollection</a> - коллекция сертификатов на которые шифруются
+			данные;</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_encryption_settings.html"
+				>EncryptionSettings</a> - настройки шифрования.</li>
+	</ol>
+	<h3>Расшифрование данных</h3> Для расшифрования данных необходимо использовать метод
+		<a class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_i_crypto_operation.html#a11dc3f01c157de83621d91a23b7f4e11"
+		>Decrypt</a> с параметрами: <ol type="1">
+		<li>Token - токен доступа;</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_document_collection.html"
+				>DocumentCollection</a> - коллекция с данными;</li>
+		<li><a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_entities_1_1_model_1_1_decryption_settings.html"
+				>DecryptionSettings</a> - настройки расшифрования;</li>
+	</ol>
+	<!--     <h3>Дополнительные операции (оптимизация)</h3> Существует еще 2 дополнительные, так
+	называемые оптимизированные, операции для подписи хеша и расшифрования ключа <a
+		class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_clients_1_1_common_1_1_i_cryptx_dss.html#a713f4c9ded74c3047429d858b4ca443e"
+		>SignHash</a> и <a class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_clients_1_1_common_1_1_i_cryptx_dss.html#a33fd5ec2222d0fa28905aa9f166d6d3f"
+		>DecryptKey</a> соответственно. Отличием от аналогов является то, что вместо
+	самих данных отправляется хеш и ключ шифрования соответственно. -->
+	<h3>Результат запроса операции</h3> При успешном выполнении запроса на криптооперацию получаем
+	ответ типа <a class="el"
+		href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_not_ready_response.html"
+		target="_self">NotReadyResponse</a> или
+		<a class="el" href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_wait_confirm_response.html">
+		WaitConfirmResponse</a> (для операций подписывания и расшифрования)
+		с идентификатором операции <a class="el"
+		href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_not_ready_response.html#a624bda2c813369c338a1bfc2c7ae1d72"
+		>OperationId</a>. Во втором случае нужно подтвердить выполнение криптооперации с помощью
+		<a class="el" href="interface_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_i_crypto_operation.html#ace2873bc9cab5c07a3bfef634402796c">
+		Confirm</a> и кода из полученного SMS.
+	<h3>Получение результата операции</h3> Для получения результата операции необходимо
+	вызвать метод <a class="el"
+		href="interface_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_i_crypto_operation.html#acee66a5d972b8bed55c8dc1f76523e08"
+		>GetOperationResult</a> с идентификатором операции OperationId. <p>В результате ответ
+		операции может принимать значения: </p><ul>
+		<li>
+			<a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_not_ready_response.html"
+				target="_self">NotReadyResponse</a> - заявка еще не обработана;</li>
+		<li>
+			<a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_document_response.html"
+				target="_self">DocumentResponse</a> - предполагается в ответе наличие
+			документов (все кроме проверки подписи); </li>
+		<li>
+			<a class="el"
+				href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_verify_sign_response.html"
+				target="_self">VerifySignResponse</a> - операция проверки
+			подписи.</li>
+	</ul>
+	<h3>Дополнительные типы возврата</h3> Помимо выше описанных типов возврата (<a
+		class="el"
+		href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_not_ready_response.html"
+		target="_self">NotReadyResponse</a>, <a class="el"
+		href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_document_response.html"
+		target="_self">DocumentResponse</a>, <a class="el"
+		href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_verify_sign_response.html"
+		target="_self">VerifySignResponse</a>), любой метод сервиса может вернуть <a
+		class="el"
+		href="class_taxnet_1_1_cryptx_d_s_s_1_1_web_service_1_1_interface_1_1_model_1_1_error_response.html"
+		target="_self">ErrorResponse</a>, при возникновении ошибки во время
+	операции.
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
